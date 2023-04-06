@@ -1,0 +1,16 @@
+<section>
+  <ul>
+    <li *ngFor="let task of listTask; let i = index">
+      <div class="task-content">
+        <input (click)="checkTask(i)" type="checkbox" />
+        <input [ngClass]="{checked: task.checked}" type="text" (input)="teste()" [(ngModel)]="task.nome" placeholder="Minha tarefa" />
+      </div>
+      <button>
+        <img src="assets/icon-trash.svg" alt="">
+      </button>
+    </li>
+  </ul>
+</section>
+
+<app-to-do-input-add-itens [isDisabled]="disableAddButton" (adicionarTarefa)="adicionar()"></app-to-do-input-add-itens>
+<app-to-do-button-delete-all></app-to-do-button-delete-all>

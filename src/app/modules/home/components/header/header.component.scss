@@ -1,0 +1,14 @@
+@import '../../../../../dist/scss/variables.scss';
+
+header {
+  width: 100%;
+  padding: 15px 0;
+
+  text-align: center;
+  background-color: $primary-color;
+
+  h1 {
+    color: $terciary-color;
+    font-size: 1.25rem;
+  }
+}
